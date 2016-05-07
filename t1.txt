@@ -681,15 +681,15 @@ Disassembly of section .text:
  8048f90:	5e                   	pop    esi
  8048f91:	c3                   	ret    
 
-08048f92 <fun7>:
+08048f92 <fun7>:	//36 50	45 40
  8048f92:	53                   	push   ebx
  8048f93:	83 ec 18             	sub    esp,0x18
  8048f96:	8b 54 24 20          	mov    edx,DWORD PTR [esp+0x20]
  8048f9a:	8b 4c 24 24          	mov    ecx,DWORD PTR [esp+0x24]
  8048f9e:	85 d2                	test   edx,edx
  8048fa0:	74 37                	je     8048fd9 <fun7+0x47>
- 8048fa2:	8b 1a                	mov    ebx,DWORD PTR [edx]
- 8048fa4:	39 cb                	cmp    ebx,ecx
+ 8048fa2:	8b 1a                	mov    ebx,DWORD PTR [edx]	//36
+ 		8048fa4:	39 cb                	cmp    ebx,ecx
  8048fa6:	7e 13                	jle    8048fbb <fun7+0x29>
  8048fa8:	89 4c 24 04          	mov    DWORD PTR [esp+0x4],ecx
  8048fac:	8b 42 04             	mov    eax,DWORD PTR [edx+0x4]
@@ -704,7 +704,7 @@ Disassembly of section .text:
  8048fc8:	8b 42 08             	mov    eax,DWORD PTR [edx+0x8]
  8048fcb:	89 04 24             	mov    DWORD PTR [esp],eax
  8048fce:	e8 bf ff ff ff       	call   8048f92 <fun7>
- 8048fd3:	8d 44 00 01          	lea    eax,[eax+eax*1+0x1]
+ 		8048fd3:	8d 44 00 01          	lea    eax,[eax+eax*1+0x1]
  8048fd7:	eb 05                	jmp    8048fde <fun7+0x4c>
  8048fd9:	b8 ff ff ff ff       	mov    eax,0xffffffff
  8048fde:	83 c4 18             	add    esp,0x18
